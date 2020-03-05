@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         //gets JSON object for bus list
         val getRoutesUrl =
             "http://ctabustracker.com/bustime/api/v2/getroutes?key=KcP2F9GisX8YZ8dZ7fXPwDzP7&format=json"
-        var busArray = arrayListOf<String>("Select ")
+        val busArray = arrayListOf<String>("Select ")
         val routesRequest = JsonObjectRequest(
             Request.Method.GET, getRoutesUrl, null,
             Response.Listener { response ->
@@ -152,4 +152,4 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         }
 
     }
-}//comment to test git
+}
